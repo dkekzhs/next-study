@@ -1,12 +1,15 @@
-# React + Vite
+### 2강 내용 정리
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+#### css 파일별로 적용하려면 어떻게 해야할까
+1. css 만들 때 ClassName.module.css 만들고 임포트 하면 된다.
+2. 이유는 vite가 자동으로 인식해주고 인식된 건 유니크한 파일로 인식되게 해준다. -> 글로벌 클래스 css랑 충돌 방지 쌉 가능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+정확한 이유
+webpack 5 + css-loader 때문에 된다. css loader 옵션을 true 로 변경되어있다면 앞서 말한대로 인식하고 해줌.
 
-## Expanding the ESLint configuration
+#### 리액트는 하나의 컴포넌트만 리턴해야하는데 어캐할까
+1. <div></div> 태그 감싸서 리턴 해도 되는데 넘 지저분해짐 -> 이건 실제로 랜더링 되버림
+2. 그래서 <></> 가짜 감싸기 생김. -> 가상 태그 실제 랜더링 될떄 추가 안됨
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+----

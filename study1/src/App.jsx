@@ -1,7 +1,8 @@
-function App() {
+import TestList from "./TestList"
 
+function App() {
   return (
-        <Test aa="ff" />
+    <TestList/>
   )
 }
 

@@ -1,11 +1,11 @@
-function Test(props){
+import classes from "./Test.module.css"
+
+function Test(props) {
     return (
-        <div className="test">
-            <h1> {props.aa} </h1>
-            <h1> test gg </h1>
-        </div>
+        <li className={classes.post}>
+            <p>{props.name} </p>
+            <p> {props.id} </p>
+        </li>
     );
 };
-
-
 export default Test;

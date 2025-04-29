@@ -1,11 +1,54 @@
+import classes from './page.module.css';
+import ImageSlideshow from '@/components/images/image-slide'
+
+import Link from "next/link"
+
+
 export default function Home() {
-  console.log("test test test")
   return (
-    <main>
-      <img src="/logo.png" alt="A server surrounded by magic sparkles." />
-      <h1>Welcome to this NextJS Course!</h1>
-      <p>🔥 Let&apos;s get started! 🔥</p>
-      <p> <a href="/about">About page </a> </p>
-    </main>
+    <>
+      <header className={classes.header}>
+        <div className={classes.slideshow}>
+          <ImageSlideshow/>
+        </div>
+        <div>
+          <div className={classes.hero}>
+            <h1>NextLevel food for NextLevel foodies</h1>
+            <p>Taste & share food from all over the world</p>
+          </div>
+          <div className={classes.cta}>
+            <Link href="/community">Join community</Link>
+            <Link href="/meals">explore meals</Link>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section className={classes.section}>
+          <h2>How it works</h2>
+          <p>
+            NextLevel Food is a platform for foodies to share their favorite
+            recipes with the world. It&apos;s a place to discover new dishes, and to
+            connect with other food lovers.
+          </p>
+          <p>
+            NextLevel Food is a place to discover new dishes, and to connect
+            with other food lovers.
+          </p>
+        </section>
+
+        <section className={classes.section}>
+          <h2>Why NextLevel Food?</h2>
+          <p>
+            NextLevel Food is a platform for foodies to share their favorite
+            recipes with the world. It&apos;s a place to discover new dishes, and to
+            connect with other food lovers.
+          </p>
+          <p>
+            NextLevel Food is a place to discover new dishes, and to connect
+            with other food lovers.
+          </p>
+        </section>
+      </main>
+    </>
   );
 }

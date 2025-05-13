@@ -15,7 +15,7 @@
 각 Slice는 ui, model, constants, api, hooks, lib 등으로 나눔
 
 FSD랑 같이 구조를 정의한 경우 프로젝트 폴더 구조는?
-
+```
 src/
 ├── app/                 
 │   ├── layout.tsx
@@ -59,3 +59,4 @@ src/
 │   ├── config/
 │   ├── hooks/
 │   └── styles/
+```
